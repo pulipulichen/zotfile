@@ -707,7 +707,7 @@ Zotero.ZotFile.Tablet = new function() {
             yield att.saveTx();
         }
         // remove subfolder if empty
-        if (attSubfolder != "" && tablet_folder != OS.Path.normalize(this.getPref('tablet.dest_dir')))
+        if (tablet_folder != OS.Path.normalize(this.getPref('tablet.dest_dir')))
             this.removeFile(tablet_folder);
         // post-processing if attachment has been removed & it's not a fake-pull
         if (item_pulled && !fake_remove) {
